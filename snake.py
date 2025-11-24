@@ -22,10 +22,9 @@ head_x=WINDOW_WIDTH//2
 # TODO: make a variable named head_y and assign half of the WINDOW_HEIGHT + 100 to it.  use integer division //
 head_y=WINDOW_HEIGHT//2+100
 # TODO: make a variable named snake_dx and assign 0 to it.
-head_dx=0
-head_dy=0
+snake_dx=0
 # TODO: repeat for a variable named snake_dy
-
+snake_dy=0
 # TODO: make a variable named score and assign 0 to it.
 score=0
 # Set colors
@@ -33,14 +32,22 @@ GREEN = (0, 255, 0)  # (r, g, b)
 RED = (150, 0, 0)
 WHITE = (255, 255, 255)
 # TODO: make a DARKGREEN color with rgb(10, 50, 10)
-# TODO: make a RED
+DARKGREEN = (10, 50, 10)
 # TODO: make a DARKRED with rgb of (150, 0, 0)
-# TODO: make a WHITE
+DARKRED=(150,0,0)
 
 # Set fonts
-
+font=pygame.font.SysFont("gabriola", 48)
 # Set text
+title_text=font.render("~~snake~~", True,GREEN,DARKRED)
+title_rect=title_text.get_rect()
+title_rect.center=(WINDOW_WIDTH//2,WINDOW_HEIGHT//2)
+score_text=font.render("score:", True,GREEN,DARKRED)
+score_rect=score_text.get_rect()
+score_rect=(10,10)
 
+game_over_text=font.render("Game Over!", True,RED,DARKRED)
+game_over_rect=(WINDOW_WIDTH//2,WINDOW_HEIGHT//2)
 # Set sounds and music
 
 # Set images (in this case, use simple rects...so just create their coordinates)
